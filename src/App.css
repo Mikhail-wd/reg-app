@@ -29,7 +29,7 @@
 }
 
 .right-column-content {
-  min-width: 45%;
+ width: 45%;
 }
 
 @media screen and (max-width: 1130px) {
