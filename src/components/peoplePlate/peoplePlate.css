@@ -1,0 +1,22 @@
+.peoplePlate {
+    overflow: hidden;
+    width: 180px;
+    border-radius: 100px;
+}
+.long-plate {
+    height: 500px;
+}
+.short-plate {
+    height: 230px;
+}
+.peoplePlate>div {
+    width: 100%;
+    height: 100%;
+    background-position: 50% 100%;
+    background-size: 170%;
+    background-repeat: no-repeat;
+}
+
+.plate-blue {
+    background-color: var(--light-blue);
+}

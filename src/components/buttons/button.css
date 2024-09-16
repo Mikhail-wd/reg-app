@@ -1,0 +1,42 @@
+.big-button {
+    padding: 25px 35px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+.small-button {
+    padding: 12px 35px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+}
+.button-yellow {
+    background-color: var(--yellow);
+}
+.button-blue {
+    background-color: var(--light-blue);
+}
+.button-grey {
+    background-color: var(--light-dark);
+}
+.button-left {
+    border-radius: 50px;
+    border-bottom-left-radius: 0px;
+}
+.button-right {
+    border-radius: 50px;
+    border-bottom-right-radius: 0px;
+}
+
+.big-button:hover, .small-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.logo {
+    width: fit-content;
+    display: block;
+    height: 40px;
+}
+
+.yellow,
+.green,
+.purple {
+    width: 22px;
+    height: 22px;
+}
+
+.yellow {
+    z-index: 2;
+    position: relative;
+    background-color: var(--yellow);
+    border-top-right-radius: 50px;
+}
+
+.green {
+    z-index:1;
+    position: relative;
+    top: -45px;
+    width: 40px;
+    background-color: var(--green);
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.purple {
+    z-index: 2;
+    border-bottom-right-radius: 50px;
+    background-color: var(--purple);
+}

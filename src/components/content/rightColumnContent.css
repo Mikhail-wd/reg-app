@@ -1,0 +1,39 @@
+.right-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.right-column-login {
+    width: 100%;
+    z-index: 4;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+.right-content-lower {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    animation: scroll 10s linear 1s infinite;
+}
+.right-content-upper {
+    position: relative;
+    animation: scroll 10s linear 1s infinite;
+    display: flex;
+    flex-direction: column;
+    margin-top: -300px;
+    gap: 20px;
+}
+@media screen and (max-width: 1450px) {
+    .right-content-wrapper{
+        width: 600px;
+    }
+}
+
+@keyframes scroll {
+    0% {top : 0}
+	100% { top: -520px; } 
+}
