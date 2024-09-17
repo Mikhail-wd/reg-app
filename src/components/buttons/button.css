@@ -40,3 +40,9 @@
     transform: scale(1.05);
     cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+    .big-button {
+        padding: 15px 25px;
+    }
+}

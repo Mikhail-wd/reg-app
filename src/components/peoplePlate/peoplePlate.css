@@ -19,7 +19,11 @@
     background-size: 170%;
     background-repeat: no-repeat;
 }
-
+.plate-video {
+    left: -150%;
+    position: relative;
+    width: 500%;
+}
 .plate-blue {
     background-color: var(--light-blue);
 }

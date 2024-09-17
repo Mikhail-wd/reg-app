@@ -25,29 +25,36 @@ const mockData = [
   {
     title: "Lorem ipsum dolor sit.",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
-    color: "blue"
+    color: "purple",
+    type: "video",
   },
   {
-    title: "gfdsgfsdfg",
+    title: "LetitBeee",
     content: "Если сравнивать с Екатеринбургом, то там больше разнообразных форматов. Но это связано скорее не с тем, что там рестораторы лучше, а тут - хуже. Это связано с потребителем. Возможно, там он богаче и его в принципе больше, чем в Перми.  У нас много заведений, которые достойно презентуют себя. Гости из других регионов их хорошо оценивают. ",
-    color: "green"
+    color: "green",
+    type: "img",
   },
   {
-    title: "DFGSdfssdf sgdfs",
+    title: "Woooho",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
-    color: "purple"
+    color: "purple",
+    type: "img",
   }, {
-    title: ":lkj;lkjKJKJGPIUY",
+    type: "img",
+    title: "IdontKnow",
     content: "Нижний Новгород интереснее Перми в сегменте премиальных ресторанов, их дизайн более красивый, чем в дорогих заведениях  Перми. Но в Нижнем и населения больше, чем у нас. В Перми есть рестораны, близкие к такому уровню, но их мало."
   }, {
-    title: "GFDSFGsdfs",
+    title: "SomeText",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
-    color: "yellow"
+    color: "yellow",
+    type: "video",
+
   }
   , {
-    title: "GFDSFGsdfs",
+    title: "Title 4",
     content: "У нас нет ресторанов, которые бы специализировались на речной рыбе. Пермь стоит на реке и что у нас очень много рыбы. Да, во многих заведениях присутствуют котлеты из щуки, но где ее поймали? ",
-    color: "yellow"
+    color: "yellow",
+    type: "img",
   }
 ]
 

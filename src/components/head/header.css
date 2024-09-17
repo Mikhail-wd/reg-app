@@ -2,6 +2,7 @@
     font-size: 32px;
     display: flex;
 }
+
 .header-nav-tabs {
     padding: 0;
     margin: 0;
@@ -11,8 +12,91 @@
     justify-content: start;
     gap: 80px;
 }
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+    transition: 0.2s;
+}
+
+.burger>div {
+    border-radius: 30px;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+}
+
+.burger:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.burger-modal {
+    position: relative;
+    top: 0%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    background-color: var(--app-background);
+    width: 100dvw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.burger-modal>li {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--app-background);
+    font-size: 21px;
+    transition: 0.2s;
+    padding: 20px;
+    text-align: center;
+}
+
+.burger-modal>li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.modal-bg {
+    z-index: 10;
+    left: 0;
+    top: -100%;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+}
+
 @media screen and (max-width: 1450px) {
     .header-nav-tabs {
         gap: 10%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .header-nav-tabs {
+        justify-content: space-between;
+    }
+
+    .header-nav-tabs li:not(.burger, .header-nav-logo) {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header-nav-tabs {
+        padding-right: 10px;
     }
 }

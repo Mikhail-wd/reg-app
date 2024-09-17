@@ -9,6 +9,5 @@
 @media screen and (max-width: 1130px) {
     .App {
         overflow-x: hidden;
-        overflow-y: scroll;
     }
 }

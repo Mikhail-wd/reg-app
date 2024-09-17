@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    height: 100dvw;
 }
 
 .right-column-login {
@@ -14,12 +15,6 @@
     justify-content: end;
 }
 
-.right-content-lower {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-}
 .platecontent {
     width: 50%;
     display: flex;
@@ -27,7 +22,31 @@
     flex-direction: row;
     gap: 20px;
 }
-.right-content-upper {
+
+.right-content-first {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-content-second {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -400px;
+    gap: 20px;
+}
+
+.right-content-third {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-content-four {
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     margin-top: -400px;
@@ -36,28 +55,56 @@
 
 .plate-group-main,
 .plate-group-support {
-    position: relative;
-    animation: scroll 15s linear 1s infinite;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     gap: 20px;
 }
-.right-content-wrapper:hover .plate-group-main,.right-content-wrapper:hover .plate-group-support {
-    animation-play-state: paused;
-  }
+
 @media screen and (max-width: 1450px) {
     .right-content-wrapper {
         width: 600px;
     }
+
+    .right-content-four {
+        display: none;
+    }
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateY(0%)
+@media screen and (max-width: 1250px) {
+    .right-content-wrapper {
+        width: 600px;
     }
 
-    100% {
-        transform: translateY(-100%)
+    .right-content-third {
+        display: none;
+    }
+
+    .plate-group-main {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .right-content-wrapper {
+        width: 600px;
+    }
+
+    .right-content-second {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .right-content-wrapper {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .left-content-wrapper {
+        width: auto;
     }
 }
