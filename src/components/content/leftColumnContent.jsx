@@ -2,6 +2,7 @@ import "./leftColumnContent.css"
 import Button from "../buttons/button"
 import { useContext } from "react"
 import { AppContext } from "../../App"
+import Footer from "../footer/footer"
 
 export default function LeftContent() {
 
@@ -23,6 +24,7 @@ export default function LeftContent() {
             <div className="left-content-util">
                 <p>Join on <br /> Google Meets</p>
             </div>
+            <Footer/>
         </div>
     )
 }

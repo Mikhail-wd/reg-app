@@ -1,0 +1,40 @@
+.footer-nav {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    width: 48dvw;
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-background);
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    height: 60px;
+    align-items: center;
+    z-index: 10;
+}
+
+.footer-nav>li {
+    transition: 0.2 ease-in-out;
+}
+
+.footer-nav>li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+@media screen and (max-width: 650px ){
+    .footer-nav {
+        left: 0;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 450px ){
+    .footer-nav {
+        font-size: 12px;
+    }
+}

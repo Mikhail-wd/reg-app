@@ -30,7 +30,7 @@ export default function PeoplePlate({ fileType, color = "blue", hieght = "long",
                 <div style={{ backgroundImage: `url(${man})` }}></div> :
                 <div>
                     <div className="video-wrapper">
-                        <video className="plate-video " autoPlay muted loop frameborder="0" src={src}>
+                        <video className="plate-video" autoPlay muted loop src={src}>
                         </video>
                     </div>
 

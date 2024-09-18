@@ -81,16 +81,16 @@ export default ({ data }) => {
         },
     });
 
-    function play() {
-        document.addEventListener('click', () => {
-            let elementArray = document.querySelectorAll("video")
-            for (let x = 0; x < elementArray.length; x++) {
-                elementArray[x].play()
-            }
-        });
-    }
+    // function play() {
+    //     document.addEventListener('click', () => {
+    //         let elementArray = document.querySelectorAll("video")
+    //         for (let x = 0; x < elementArray.length; x++) {
+    //             elementArray[x].play()
+    //         }
+    //     });
+    // }
     useEffect(() => {
-        play()
+        // play()
     }, [])
     return (
         <div className="right-content-wrapper">
