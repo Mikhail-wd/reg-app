@@ -24,6 +24,7 @@
 }
 
 .right-content-first {
+    min-height: 130dvh;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -63,41 +64,27 @@
 }
 
 @media screen and (max-width: 1450px) {
-    .right-content-wrapper {
-        width: 600px;
-    }
-
     .right-content-four {
         display: none;
     }
 }
 
 @media screen and (max-width: 1250px) {
-    .right-content-wrapper {
-        width: 600px;
-    }
-
     .right-content-third {
         display: none;
     }
-
     .plate-group-main {
         justify-content: center;
     }
 }
 
 @media screen and (max-width: 1050px) {
-    .right-content-wrapper {
-        width: 600px;
-    }
-
     .right-content-second {
         display: none;
     }
 }
 
 @media screen and (max-width: 900px) {
-
     .right-content-wrapper {
         width: auto;
     }
@@ -105,6 +92,7 @@
 
 @media screen and (max-width: 660px) {
     .left-content-wrapper {
+        margin-top: 25%;
         width: auto;
     }
 }

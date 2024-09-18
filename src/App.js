@@ -2,7 +2,7 @@ import './App.css';
 import Header from "./components/head/header"
 import LeftContent from './components/content/leftColumnContent'
 import RightContent from './components/content/rightColumnContent'
-import { useReducer, createContext } from "react"
+import { useReducer, createContext, useRef, useState } from "react"
 
 
 const AppData = {
@@ -20,8 +20,25 @@ function reducer(state, action) {
       console.log("Reducer error")
   }
 }
-
 const mockData = [
+  {
+    title: "Lorem ipsum dolor sit.",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
+    color: "purple",
+    type: "video",
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
+    color: "purple",
+    type: "video",
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
+    color: "purple",
+    type: "video",
+  },
   {
     title: "Lorem ipsum dolor sit.",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
@@ -50,6 +67,20 @@ const mockData = [
     type: "video",
 
   }
+  ,
+  {
+    title: "LetitBeee",
+    content: "Если сравнивать с Екатеринбургом, то там больше разнообразных форматов. Но это связано скорее не с тем, что там рестораторы лучше, а тут - хуже. Это связано с потребителем. Возможно, там он богаче и его в принципе больше, чем в Перми.  У нас много заведений, которые достойно презентуют себя. Гости из других регионов их хорошо оценивают. ",
+    color: "green",
+    type: "img",
+  },
+  ,
+  {
+    title: "LetitBeee",
+    content: "Если сравнивать с Екатеринбургом, то там больше разнообразных форматов. Но это связано скорее не с тем, что там рестораторы лучше, а тут - хуже. Это связано с потребителем. Возможно, там он богаче и его в принципе больше, чем в Перми.  У нас много заведений, которые достойно презентуют себя. Гости из других регионов их хорошо оценивают. ",
+    color: "green",
+    type: "img",
+  },
   , {
     title: "Title 4",
     content: "У нас нет ресторанов, которые бы специализировались на речной рыбе. Пермь стоит на реке и что у нас очень много рыбы. Да, во многих заведениях присутствуют котлеты из щуки, но где ее поймали? ",
@@ -57,9 +88,13 @@ const mockData = [
     type: "img",
   }
 ]
-
 function App() {
 
+  function shuffle(array) {
+    let newArray = []
+    newArray.push(array.sort(() => Math.random() - 0.5))
+    return newArray
+  }
   const [appState, dispatch] = useReducer(reducer, AppData)
   return (
     <AppContext.Provider value={{ data: appState, dispatchData: dispatch }}>

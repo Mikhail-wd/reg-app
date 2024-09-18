@@ -19,7 +19,7 @@
 }
 
 .green {
-    z-index:1;
+    z-index: 1;
     position: relative;
     top: -45px;
     width: 40px;
@@ -32,4 +32,41 @@
     z-index: 2;
     border-bottom-right-radius: 50px;
     background-color: var(--purple);
+}
+
+@media screen and (min-width: 1950px) {
+    .logo {
+        width: fit-content;
+        display: block;
+        height: 3vw;
+    }
+
+    .yellow,
+    .green,
+    .purple {
+        width: 2vw;
+        height: 2vw;
+    }
+    .purple {
+        z-index: 2;
+        border-bottom-right-radius: 4vw;
+    }
+    .yellow {
+        border-top-right-radius: 4vw;
+    }
+
+    .green {
+        border-bottom-right-radius: 4vw;
+        border-top-left-radius: 4vw;
+    }
+
+    .green {
+        z-index: 1;
+        position: relative;
+        top: -4vw;
+        width: 4vw;
+        background-color: var(--green);
+        border-bottom-right-radius: 4vw;
+        border-top-left-radius: 4vw;
+    }
 }

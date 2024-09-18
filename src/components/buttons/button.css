@@ -8,6 +8,7 @@
     transition: 0.2s ease-in-out;
     white-space: nowrap;
 }
+
 .small-button {
     padding: 12px 35px;
     border: none;
@@ -18,27 +19,40 @@
     transition: 0.2s ease-in-out;
     white-space: nowrap;
 }
+
 .button-yellow {
     background-color: var(--yellow);
 }
+
 .button-blue {
     background-color: var(--light-blue);
 }
+
 .button-grey {
     background-color: var(--light-dark);
 }
+
 .button-left {
     border-radius: 50px;
     border-bottom-left-radius: 0px;
 }
+
 .button-right {
     border-radius: 50px;
     border-bottom-right-radius: 0px;
 }
 
-.big-button:hover, .small-button:hover {
+.big-button:hover,
+.small-button:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+@media screen and (min-width: 1950px) {
+    .big-button {
+        padding: 0.8vw 1.5vw;
+        font-size: 1.2vw;
+    }
 }
 
 @media screen and (max-width: 600px) {

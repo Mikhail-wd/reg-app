@@ -20,9 +20,8 @@
     background-repeat: no-repeat;
 }
 .plate-video {
-    left: -150%;
+    height: 110%;
     position: relative;
-    width: 500%;
 }
 .plate-blue {
     background-color: var(--light-blue);

@@ -1,21 +1,25 @@
 import "./rightColumnContent.css";
 import PeoplePlate from "../peoplePlate/peoplePlate";
 import gsap from 'gsap';
-import { useEffect, memo } from "react";
+import { useEffect, memo, useRef } from "react";
+import { Draggable } from "gsap/all";
 
 
-
-const  RightContent = memo(function RightContent({ data }) {
-
-    const dataThird =   data.reverse()
+const RightContent = memo(function RightContent({ data }) {
+    gsap.registerPlugin(Draggable)
+    const sliderRef = useRef(null);
 
     function verticalLoop(items, config) {
         items = gsap.utils.toArray(items);
         config = config || {};
 
         items.forEach(items => {
-            items.addEventListener("mouseenter", () => gsap.to(tl, { timeScale: 0, overwrite: true }));
-            items.addEventListener("mouseleave", () => gsap.to(tl, { timeScale: 1, overwrite: true }));
+            items.addEventListener("mouseenter", () => gsap.to(tl, {
+                timeScale: 0,
+            }));
+            items.addEventListener("mouseleave", () => gsap.to(tl, {
+                timeScale: 1,
+            }));
         });
         let onChange = config.onChange,
             lastIndex = 0,
@@ -211,28 +215,52 @@ const  RightContent = memo(function RightContent({ data }) {
         onChange && onChange(items[curIndex], curIndex);
         return tl;
     }
+
+    function play() {
+        document.addEventListener('click', () => {
+            let elementArray = document.querySelectorAll("video")
+            for (let x = 0; x < elementArray.length; x++) {
+                elementArray[x].play()
+            }
+        });
+    }
+
     useEffect(() => {
-        const loop = verticalLoop(".right-content-first .peoplePlate", {
-            repeat: -1,
-            speed: 1
+        play()
+    }, [])
+    useEffect(() => {
+        Draggable.zIndex = 1
+        Draggable.create(".right-content-first, .right-content-second, .right-content-third, .right-content-four", {
+            type: "y",
+            bounds: {
+                zIndex: 0,
+                minY: data.length,
+                maxY: -data.length * 250
+            }
         });
-        const loopSecond = verticalLoop(".right-content-second .peoplePlate", {
+
+        verticalLoop(".right-content-first .peoplePlate", {
             repeat: -1,
-            speed: 5
+            speed: 1,
+            draggable: true
         });
-        const loopThird = verticalLoop(".right-content-third .peoplePlate", {
+        verticalLoop(".right-content-second .peoplePlate", {
             repeat: -1,
-            speed: 3
+            speed: 5,
         });
-        const loopFour = verticalLoop(".right-content-four .peoplePlate", {
+        verticalLoop(".right-content-third .peoplePlate", {
             repeat: -1,
-            speed: 2
+            speed: 3,
+        });
+        verticalLoop(".right-content-four .peoplePlate", {
+            repeat: -1,
+            speed: 2,
         });
     }, [])
     return (
         <div className="right-content-wrapper">
-            <div className="plate-group-main" styles={`--amount: ${data.length}`}>
-                <div className="right-content-first">
+            <div className="plate-group-main" >
+                <div className="right-content-first" ref={sliderRef} >
                     {data.map((element, index) => {
                         return <PeoplePlate key={index} fileType={element.type} color={element.color} title={element.title} content={element.content} />
                     })}
@@ -243,7 +271,7 @@ const  RightContent = memo(function RightContent({ data }) {
                     })}
                 </div>
                 <div className="right-content-third">
-                    {dataThird.map((element, index) => {
+                    {data.map((element, index) => {
                         return <PeoplePlate key={index} fileType={element.type} color={element.color} title={element.title} content={element.content} />
                     })}
                 </div>
