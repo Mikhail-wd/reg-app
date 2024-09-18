@@ -1,17 +1,24 @@
-.peoplePlate {
+.peoplePlate,
+.keen-slider__slide {
     overflow: hidden;
-    width: 180px;
+    max-width: 180px;
     border-radius: 100px;
+    min-width: 180px;
+    ;
 }
+
 .peoplePlate:hover {
     cursor: pointer;
 }
+
 .long-plate {
     height: 500px;
 }
+
 .short-plate {
     height: 230px;
 }
+
 .peoplePlate>div {
     width: 100%;
     height: 100%;
@@ -19,19 +26,34 @@
     background-size: 170%;
     background-repeat: no-repeat;
 }
-.plate-video {
-    height: 110%;
+
+.plate-video,
+.video-wrapper {
+    height: 100%;
+    top: 0%;
+    left: -100%;
     position: relative;
 }
+
+.video-wrapper {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+}
+
 .plate-blue {
     background-color: var(--light-blue);
 }
+
 .plate-green {
     background-color: var(--green);
 }
+
 .plate-purple {
     background-color: var(--purple);
 }
+
 .plate-yellow {
     background-color: var(--yellow);
 }

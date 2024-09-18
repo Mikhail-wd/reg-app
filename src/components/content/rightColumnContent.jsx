@@ -12,11 +12,11 @@ const RightContent = memo(function RightContent({ data }) {
     function verticalLoop(items, config) {
         items = gsap.utils.toArray(items);
         config = config || {};
-
         items.forEach(items => {
             items.addEventListener("mouseenter", () => gsap.to(tl, {
                 timeScale: 0,
-            }));
+            }
+            ));
             items.addEventListener("mouseleave", () => gsap.to(tl, {
                 timeScale: 1,
             }));

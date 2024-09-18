@@ -2,6 +2,7 @@ import './App.css';
 import Header from "./components/head/header"
 import LeftContent from './components/content/leftColumnContent'
 import RightContent from './components/content/rightColumnContent'
+import RightContentAlter from './components/content/rightColumnContentAlter'
 import { useReducer, createContext, useRef, useState } from "react"
 
 
@@ -22,28 +23,17 @@ function reducer(state, action) {
 }
 const mockData = [
   {
-    title: "Lorem ipsum dolor sit.",
+    title: "Woooho",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
     color: "purple",
-    type: "video",
+    type: "img",
   },
   {
     title: "Lorem ipsum dolor sit.",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
     color: "purple",
     type: "video",
-  },
-  {
-    title: "Lorem ipsum dolor sit.",
-    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
-    color: "purple",
-    type: "video",
-  },
-  {
-    title: "Lorem ipsum dolor sit.",
-    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
-    color: "purple",
-    type: "video",
+    src: "https://mazwai.com/videvo_files/video/free/2019-12/small_watermarked/190915_B_01_Timelapse%20Danang_02_preview.webm"
   },
   {
     title: "LetitBeee",
@@ -52,20 +42,43 @@ const mockData = [
     type: "img",
   },
   {
-    title: "Woooho",
+    title: "Lorem ipsum dolor sit.",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
     color: "purple",
+    type: "video",
+    src: "https://mazwai.com/videvo_files/video/free/2015-07/small_watermarked/Clouds_1_1_preview.webm"
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
+    color: "purple",
+    type: "video",
+    src: "https://mazwai.com/videvo_files/video/free/2016-10/small_watermarked/160929_133_London_TowerBridgeTimeLapse_1080p_preview.webm"
+  },
+  {
+    title: "Title 4",
+    content: "У нас нет ресторанов, которые бы специализировались на речной рыбе. Пермь стоит на реке и что у нас очень много рыбы. Да, во многих заведениях присутствуют котлеты из щуки, но где ее поймали? ",
+    color: "yellow",
     type: "img",
-  }, {
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
+    color: "purple",
+    type: "video",
+    src: "https://mazwai.com/videvo_files/video/free/2014-06/small_watermarked/davide_quatela--the_london_feeling_preview.webm"
+  },
+  {
     type: "img",
     title: "IdontKnow",
     content: "Нижний Новгород интереснее Перми в сегменте премиальных ресторанов, их дизайн более красивый, чем в дорогих заведениях  Перми. Но в Нижнем и населения больше, чем у нас. В Перми есть рестораны, близкие к такому уровню, но их мало."
-  }, {
+  },
+  {
     title: "SomeText",
     content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, maxime!",
     color: "yellow",
     type: "video",
-
+    src: "https://mazwai.com/videvo_files/video/free/2015-09/small_watermarked/up_in_the_clouds_preview.webm"
   }
   ,
   {
@@ -79,12 +92,6 @@ const mockData = [
     title: "LetitBeee",
     content: "Если сравнивать с Екатеринбургом, то там больше разнообразных форматов. Но это связано скорее не с тем, что там рестораторы лучше, а тут - хуже. Это связано с потребителем. Возможно, там он богаче и его в принципе больше, чем в Перми.  У нас много заведений, которые достойно презентуют себя. Гости из других регионов их хорошо оценивают. ",
     color: "green",
-    type: "img",
-  },
-  , {
-    title: "Title 4",
-    content: "У нас нет ресторанов, которые бы специализировались на речной рыбе. Пермь стоит на реке и что у нас очень много рыбы. Да, во многих заведениях присутствуют котлеты из щуки, но где ее поймали? ",
-    color: "yellow",
     type: "img",
   }
 ]
@@ -105,7 +112,8 @@ function App() {
             <LeftContent />
           </div>
           <div className="right-column-content">
-            <RightContent data={mockData} />
+            {/* <RightContent data={mockData} /> */}
+            <RightContentAlter data={mockData} />
           </div>
         </div>
       </div>

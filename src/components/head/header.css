@@ -49,6 +49,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     overflow: hidden;
+    padding-bottom: 25px;
 }
 
 .burger-modal>li {
@@ -57,7 +58,7 @@
     background-color: var(--app-background);
     font-size: 21px;
     transition: 0.2s;
-    padding: 25px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -100,6 +101,9 @@
     .burger {
         display: flex;
     }
+    .header-nav-tabs{
+        flex-direction: row-reverse;
+    }
     .header-nav-tabs {
         position: absolute;
         top: 0%;
@@ -115,8 +119,8 @@
         padding-right: 10px;
     }
 }
-@media screen and (max-width: 310px) {
+@media screen and (max-width: 350px) {
     .header-nav-tabs {
-        width: 65%;
+        width: 58%;
     }
 }

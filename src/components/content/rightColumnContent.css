@@ -4,9 +4,12 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    height: 100dvw;
+    margin-top: -200px;
 }
-
+.keen-slider {
+    max-width: 180px;
+    min-width: 180px;
+}
 .right-column-login {
     width: 100%;
     z-index: 4;
@@ -24,34 +27,23 @@
 }
 
 .right-content-first {
-    min-height: 130dvh;
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .right-content-second {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: -400px;
-    gap: 20px;
 }
 
 .right-content-third {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .right-content-four {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: -400px;
-    gap: 20px;
 }
 
 .plate-group-main,
@@ -64,14 +56,14 @@
 }
 
 @media screen and (max-width: 1450px) {
-    .right-content-four {
-        display: none;
+    .right-content-four, .keen-slider .right-content-four {
+        display: none !important;
     }
 }
 
 @media screen and (max-width: 1250px) {
-    .right-content-third {
-        display: none;
+    .right-content-third, .keen-slider .right-content-third  {
+        display: none !important;
     }
     .plate-group-main {
         justify-content: center;
@@ -79,8 +71,8 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .right-content-second {
-        display: none;
+    .right-content-second, .keen-slider .right-content-second {
+        display: none !important;
     }
 }
 
