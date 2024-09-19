@@ -3,6 +3,7 @@ import Header from "./components/head/header"
 import LeftContent from './components/content/leftColumnContent'
 import RightContent from './components/content/rightColumnContent'
 import RightContentAlter from './components/content/rightColumnContentAlter'
+import SideModal from './components/mobileModal/sideModal';
 import { useReducer, createContext, useRef, useState } from "react"
 
 
@@ -111,6 +112,7 @@ function App() {
             <Header />
             <LeftContent />
           </div>
+          <SideModal  data={mockData}/>
           <div className="right-column-content">
             {/* <RightContent data={mockData} /> */}
             <RightContentAlter data={mockData} />

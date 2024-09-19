@@ -119,9 +119,20 @@ body {
     min-width: 190px;
   }
 }
+@media screen and (max-width:450px) {
+  .right-column-content {
+    display: none;
+  }
+  .left-column-content {
+    width: 100%;
+    min-width: 100%;
+  }
+  .app-mainfraim {    
+    display: flex;
+  }
+}
 
 @media screen and (max-width:400px) {
   .app-mainfraim {
-    width: calc(100dvw - 10px);
   }
 }

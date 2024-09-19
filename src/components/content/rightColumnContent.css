@@ -88,3 +88,8 @@
         width: auto;
     }
 }
+@media screen and (max-width: 450px) {
+    .right-content-wrapper {
+        width: 40%;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import PeoplePlate from '../peoplePlate/peoplePlate'
 import "keen-slider/keen-slider.min.css";
@@ -81,17 +81,6 @@ export default ({ data }) => {
         },
     });
 
-    // function play() {
-    //     document.addEventListener('click', () => {
-    //         let elementArray = document.querySelectorAll("video")
-    //         for (let x = 0; x < elementArray.length; x++) {
-    //             elementArray[x].play()
-    //         }
-    //     });
-    // }
-    useEffect(() => {
-        // play()
-    }, [])
     return (
         <div className="right-content-wrapper">
             <div className="plate-group-main" >
