@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/reg-app/static/css/main.938e1e45.css",
-    "main.js": "/reg-app/static/js/main.78192754.js",
+    "main.css": "/reg-app/static/css/main.1c0bf9c9.css",
+    "main.js": "/reg-app/static/js/main.dc819535.js",
     "static/js/453.52c5dfe3.chunk.js": "/reg-app/static/js/453.52c5dfe3.chunk.js",
     "static/media/man.png": "/reg-app/static/media/man.a2056b68a4f2555e6a80.png",
+    "static/media/RebelTypeDog-Regular.otf": "/reg-app/static/media/RebelTypeDog-Regular.02a3b5cbe00c3ab74a65.otf",
+    "static/media/knot.svg": "/reg-app/static/media/knot.1c2dbee293e26bb3c48979ef9b332314.svg",
     "index.html": "/reg-app/index.html",
-    "static/media/arrowLeft.svg": "/reg-app/static/media/arrowLeft.d3312e2da1dcb51761275074da780ef6.svg",
-    "main.938e1e45.css.map": "/reg-app/static/css/main.938e1e45.css.map",
-    "main.78192754.js.map": "/reg-app/static/js/main.78192754.js.map",
+    "static/media/arrowLeft.svg": "/reg-app/static/media/arrowLeft.058355d4e956c73227c04d5260b8de8d.svg",
+    "static/media/arrowUp.svg": "/reg-app/static/media/arrowUp.d746988b745c666df11dc859f6fc8b84.svg",
+    "main.1c0bf9c9.css.map": "/reg-app/static/css/main.1c0bf9c9.css.map",
+    "main.dc819535.js.map": "/reg-app/static/js/main.dc819535.js.map",
     "453.52c5dfe3.chunk.js.map": "/reg-app/static/js/453.52c5dfe3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.938e1e45.css",
-    "static/js/main.78192754.js"
+    "static/css/main.1c0bf9c9.css",
+    "static/js/main.dc819535.js"
   ]
 }
