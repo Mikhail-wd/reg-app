@@ -54,6 +54,13 @@
     width: 100%;
     gap: 20px;
 }
+.plate-group-mainMobile{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 170px;
+    padding-left: 10px;
+}
 
 @media screen and (max-width: 1450px) {
     .right-content-four, .keen-slider .right-content-four {
@@ -89,7 +96,11 @@
     }
 }
 @media screen and (max-width: 450px) {
+    .keen-slider {
+        max-width: 100%;
+        min-width: 180px;
+    }
     .right-content-wrapper {
-        width: 40%;
+        width: 100%;
     }
 }

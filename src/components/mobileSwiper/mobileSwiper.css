@@ -1,0 +1,358 @@
+@media screen and (min-width:450px) {
+    .mobile-mainFrame {
+        display: none;
+    }
+
+    .modal-buttonKnot {
+        display: none;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .mobile-mainFrame {
+        width: 100dvw;
+        position: absolute;
+    }
+
+    .modal-buttonKnot {
+        transition: 0.2s ease-in-out;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 52dvh;
+        z-index: 11;
+        padding: 8px;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+
+    .modal-buttonKnot>div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.2s ease-in-out;
+    }
+
+    .modal-buttonKnot>div>img {
+        display: block;
+        position: relative;
+        width: 18px
+    }
+
+    .mobile-footerMenu {
+        background-color: transparent;
+        height: 100dvh;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .modal-buttonKnot:hover,
+    .modal-buttonKnot>div {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .mobile-footerMenu-body {
+        top: 100%;
+        position: absolute;
+        width: 100dvw;
+        height: 100dvh;
+        z-index: 9;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .mobile-footerMenu-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        list-style: none;
+        width: 100%;
+        min-height: 52dvh;
+        background-color: #2a2936b4;
+    }
+
+    .mobile-footerMenu-list>li {
+        transition: 0.2s ease-in-out;
+    }
+
+    .mobile-footerMenu-list>li:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    .swipe-notifacation {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100dvw;
+    }
+
+    .arrowHelpLeft,
+    .arrowHelpRight {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 2px;
+        z-index: 21;
+    }
+
+    .arrowHelpLeft>div {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2px;
+        z-index: 21;
+        width: 10px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 260%;
+    }
+
+    .arrowHelpRight>div {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2px;
+        z-index: 21;
+        width: 10px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 260%;
+        transform: scale(-1);
+    }
+
+    .circle1 {
+        width: 1;
+        height: 1;
+        z-index: 20;
+        left: 5px;
+        position: absolute;
+        animation-name: blob;
+        animation-duration: 1s;
+    }
+
+    .circle2 {
+        width: 1;
+        height: 1;
+        z-index: 20;
+        right: 5px;
+        position: absolute;
+        animation-name: blob;
+        animation-duration: 1s;
+    }
+
+    .mobil-userHeader {
+        width: 100%;
+        text-align: end;
+        font-size: 14px;
+    }
+
+    .mobil-userHeader>p {
+        padding-top: 18px;
+        padding-right: 10px;
+        margin: 0;
+    }
+
+    .mobil-userHeader-Timer {
+        width: 100%;
+        height: 100px;
+    }
+
+    .mobil-userHeader-Timer {
+        margin-top: 30px;
+        width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
+        font-family: "RebelDog";
+        font-size: 9dvw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 2%;
+        height: 10dvh;
+        z-index: 11;
+    }
+
+    .mobil-userHeader-Timer>div {
+        text-align: start;
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+
+    .mobil-userHeader-Timer>div>span {
+        width: 100%;
+    }
+
+    .mobil-userHeader-Timer>div>span:nth-child(1) {
+        text-align: start;
+    }
+
+    .mobil-userHeader-Timer>div>span:nth-child(2) {
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        text-align: start;
+        padding-left: 3px;
+        margin-top: -10px;
+    }
+
+    .buy-nowButton {
+        margin-top: -40px;
+        z-index: 11;
+        position: absolute;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        border: none;
+        border-radius: 50%;
+        min-width: 90px;
+        min-height: 90px;
+        width: 90px;
+        height: 90px;
+        padding-top: 15px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .buy-nowButton>img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .buy-nowButton>span {
+        margin-top: -8px;
+    }
+
+    .mobil-userHeader-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        position: relative;
+        bottom: 0;
+        flex-wrap: nowrap;
+        background-color: transparent;
+        max-height: 80px;
+        margin-top: auto;
+    }
+
+    .footerTime {
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+    .footerData {
+        display: flex;
+        justify-content: end;
+        flex-direction: column;
+        font-size: 47px;
+        gap: 0;
+        text-align: end;
+        font-family: "RebelDog";
+    }
+
+    .footerData>span {
+        line-height: 33px
+    }
+
+    ;
+
+    .footerData>span:first-child(1) {
+        margin-top: 0px;
+    }
+
+    .background {
+        width: 100%;
+        height: 18dvh;
+        display: flex;
+        justify-content: start;
+    }
+
+    .backgroundBlack {
+        background: radial-gradient(circle 90px at calc(100% - 65px) 0%, transparent 80%, var(--app-background) 80%);
+        width: 600px;
+        position: absolute;
+        height: 60dvh;
+        width: 100%;
+        bottom: -35dvh;
+        right: 0px;
+    }
+
+    .backgroundBlackleft,
+    .backgroundBlackright {
+        width: 20dvw;
+    }
+
+    .backgroundBlackleft {
+        width: 90px;
+        height: auto;
+        background: rgb(26, 23, 30);
+        background: radial-gradient(circle 80px at 100% 0%, transparent 80%, var(--app-background) 80%);
+    }
+
+    .backgroundBlackright {
+        width: 90px;
+        height: auto;
+        background: rgb(26, 23, 30);
+        background: radial-gradient(circle 80px at 00% 0%, transparent 80%, var(--app-background) 80%);
+
+    }
+
+    @keyframes blob {
+        0% {
+            width: 1px;
+            height: 1px;
+            border-radius: 50%;
+        }
+
+        100% {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.226);
+        }
+    }
+}
+
+@media screen and (max-height:650px) {
+    .mobile-footerMenu-list {
+        height: 60dvh;
+    }
+
+    .backgroundBlack {
+        height: 380px;
+        bottom: -230px;
+    }
+}

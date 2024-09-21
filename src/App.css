@@ -35,7 +35,12 @@ body {
   overflow: hidden;
 }
 
-
+.alterSwiper {
+  box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
+  max-height: calc(100dvh + 10px)
+}
 
 @media screen and (max-width: 1130px) {
   .app-mainfraim {
@@ -128,7 +133,7 @@ body {
     min-width: 100%;
   }
   .app-mainfraim {    
-    display: flex;
+    display: none;
   }
 }
 

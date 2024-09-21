@@ -60,3 +60,16 @@
         padding: 15px 25px;
     }
 }
+@media screen and (max-width: 450px) {
+    .big-button {
+        position: relative;
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .big-button {
+        position: relative;
+        font-size: 15px;
+        padding: 8px 11px;
+    }
+}

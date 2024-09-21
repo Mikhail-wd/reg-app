@@ -75,17 +75,28 @@
     width: 100dvw;
     height: 100dvh;
 }
+
 @media screen and (min-width: 1950px) {
     .header-nav-logo {
         font-size: 2.5vw;
     }
+
     .header-nav-tabs {
         font-size: 1.5vw;
     }
 }
+
 @media screen and (max-width: 1450px) {
     .header-nav-tabs {
         gap: 10%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-nav-tabs {
+        margin-top: 8px;
+        justify-content: space-between;
+        gap: 5%;
     }
 }
 
@@ -93,6 +104,7 @@
     .header-nav-tabs {
         margin-top: 8px;
         justify-content: space-between;
+        gap: 5%;
     }
 
     .header-nav-tabs li:not(.burger, .header-nav-logo) {
@@ -100,11 +112,13 @@
     }
 
     .burger {
-        display: flex;
+        display: none;
     }
-    .header-nav-tabs{
-        flex-direction: row-reverse;
+
+    .header-nav-tabs {
+        flex-direction: row;
     }
+
     .header-nav-tabs {
         position: absolute;
         top: 0%;
@@ -114,20 +128,20 @@
         z-index: 5;
     }
 }
+
 @media screen and (max-width:450px) {
     .header-nav-tabs {
-        justify-content: space-around;
-        width: 95dvw;
-        left: 0;
         margin: 0 auto;
     }
-  }
+}
+
 @media screen and (max-width: 420px) {
     .header-nav-tabs {
         padding-right: 10px;
         gap: 5px;
     }
-    .header-nav-logo{
-        font-size: 24px;
+
+    .header-nav-logo {
+        font-size: 32px;
     }
 }

@@ -30,7 +30,7 @@ const Slider = ({ data }) => {
 
     return (
         <div className="right-content-wrapper">
-            <div className="plate-group-main" >
+            <div className="plate-group-mainMobile" >
                 <div ref={sliderRef} className="keen-slider right-content-first">
                     {data.map((element, index) => {
                         return <PeoplePlate key={index}
@@ -57,7 +57,7 @@ export default function SideModal({ data }) {
 
         if (!modalState) {
             setModalState(true)
-            timeLine.to(".modal-wrapper", { xPercent: -40, delay: 0.2 })
+            timeLine.to(".modal-wrapper", { xPercent: -100, delay: 0.2 })
                 .to(".button-modal-img", {
                     borderTopLeftRadius: 15,
                     borderBottomLeftRadius: 15,
@@ -83,8 +83,16 @@ export default function SideModal({ data }) {
         <>
             <div className="modal-wrapper" onClick={(event) => toggleSideModal(event)}>
                 <div className="button-modal" onClick={(event) => toggleSideModal(event)}>
-                    <img  draggable="false"src={arrow} alt="arrow" className="button-modal-img" />
+                    <img draggable="false" src={arrow} alt="arrow" className="button-modal-img" />
                 </div>
+                <ul className="modal-leftColumn">
+                    <li>Lorem, ipsum.</li>
+                    <li>amet consectetur adipisicing </li>
+                    <li>Lorem, ips </li>
+                    <li>it amet </li>
+                    <li>adipisicing</li>
+                    <li>posting</li>
+                </ul>
                 <Slider data={data} />
             </div>
         </>
